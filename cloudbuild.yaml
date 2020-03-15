@@ -1,0 +1,4 @@
+steps:
+-   id: "Rodando Go soma"
+    name: 'gcr.io/$PROJECT_ID/docker-compose:1.24.0'
+    args: ['-f', 'Dockerfile', 'up', '-d']
