@@ -1,11 +1,7 @@
 steps:
 
--   name: 'gcr.io/cloud-builders/docker'
-    args:
-    - 'build'
-    - '--build-arg'
-    - '-t'
-    - 'gcr.io/$PROJECT_ID/go_soma'
+-   name: 'gcr.io/$PROJECT_ID/docker-compose'
+    args: ["up", "-d"]
 
 #-   name: 'gcr.io/$PROJECT_ID/go_soma'
 
@@ -13,6 +9,3 @@ steps:
 #     name: "gcr.io/cloud-builders/go"
 #     args: ['test']
 #     env: ["PROJECT_ROOT=soma"]
-
-images:
--   'gcr.io/$PROJECT_ID/go_soma'
