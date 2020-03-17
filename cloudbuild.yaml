@@ -7,7 +7,7 @@ steps:
     - '-t'
     - 'gcr.io/$PROJECT_ID/go_soma:latest'
 
--   name: 'gcr.io/$PROJECT_ID/go_soma'
+#-   name: 'gcr.io/$PROJECT_ID/go_soma'
 
 # -   id: "Rodando testes"
 #     name: "gcr.io/cloud-builders/go"
