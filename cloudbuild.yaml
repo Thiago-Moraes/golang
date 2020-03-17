@@ -1,12 +1,11 @@
 steps:
-    -   id: "Rodando docker-compose"
-        name: 'gcr.io/$PROJECT_ID/docker-compose:1.24.0'
-        args: ['up', '-d']
-    
     -   id: "Rodando testes"
         name: "gcr.io/cloud-builders/go"
         args: ['test']
+        env: ["PROJECT_ROOT=soma"]
 
-    -   id: "Rodando o programa"
-        name: "gcr.io/cloud-builders/go"
-        args: ['soma']
+    -   id: "Rodando o docker-compose"
+        name: "gcr.io/$PROJECT_ID/docker-compose"
+        args: ["build", "--targ=gcr.io/$PROJECT_ID/soma"]
+
+    images: ["gcr.io/$PROJECT_ID/soma"]

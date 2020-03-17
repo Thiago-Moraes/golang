@@ -4,4 +4,4 @@ WORKDIR /go/src
 
 COPY  ./src/soma .
 
-RUN go build .
+ENTRYPOINT ["/soma"]
