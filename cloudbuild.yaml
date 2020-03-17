@@ -6,13 +6,13 @@ steps:
     - '--build-arg'
     - '-t'
     - 'gcr.io/$PROJECT_ID/go_soma:latest'
-    
+
 -   name: 'gcr.io/$PROJECT_ID/go_soma'
 
--   id: "Rodando testes"
-    name: "gcr.io/cloud-builders/go"
-    args: ['test']
-    env: ["PROJECT_ROOT=soma"]
+# -   id: "Rodando testes"
+#     name: "gcr.io/cloud-builders/go"
+#     args: ['test']
+#     env: ["PROJECT_ROOT=soma"]
 
 images:
 - 'gcr.io/$PROJECT_ID/go_soma:latest'
