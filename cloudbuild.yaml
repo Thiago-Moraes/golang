@@ -1,4 +1,12 @@
 steps:
--   id: "Rodando Go soma"
-    name: 'gcr.io/$PROJECT_ID/docker-compose:1.24.0'
-    args: ['up', '-d']
+    -   id: "Rodando docker-compose"
+        name: 'gcr.io/$PROJECT_ID/docker-compose:1.24.0'
+        args: ['up', '-d']
+    
+    -   id: "Rodando testes"
+        name: "gcr.io/cloud-builders/go"
+        args: ['test']
+
+    -   id: "Rodando o programa"
+        name: "gcr.io/cloud-builders/go"
+        args: ['soma']
