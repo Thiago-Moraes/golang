@@ -1,6 +1,6 @@
 steps:
 
--   name: 'gcr.io/$PROJECT_ID/docker-compose'
+-   name: 'gcr.io/cloud-builders/docker'
     args:
     - 'build'
     - '--build-arg'
@@ -15,4 +15,4 @@ steps:
 #     env: ["PROJECT_ROOT=soma"]
 
 images:
-- 'gcr.io/$PROJECT_ID/go_soma:latest'
+-   'gcr.io/$PROJECT_ID/go_soma:latest'
