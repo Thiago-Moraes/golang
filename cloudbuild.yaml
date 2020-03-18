@@ -11,5 +11,5 @@ steps:
   - name: 'gcr.io/$PROJECT_ID/go_soma'
     args: ['version']
   
-  images:
+images:
   - 'gcr.io/$PROJECT_ID/go_soma:latest'
