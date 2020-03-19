@@ -1,5 +1,8 @@
-FROM golang:alpine AS builder
+FROM golang:1.13-alpine
 
-COPY  ./src/soma .
+COPY . .
 
-ENTRYPOINT ["/soma"]
+RUN go get -d -v ./...
+RUN go install -v ./...
+
+RUN ls -l
