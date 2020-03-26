@@ -1,6 +1,6 @@
 FROM golang:1.13-alpine
 
-WORKDIR /src/soma
+WORKDIR /go/src
 
 COPY . .
 
