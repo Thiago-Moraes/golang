@@ -1,8 +1,9 @@
 FROM golang:1.13-alpine
 
-COPY . .
+WORKDIR /src/soma
 
-RUN go get -d -v ./...
-RUN go install -v ./...
+COPY ./src/soma/ .
 
-ENTRYPOINT [ "soma" ]
+RUN GOOS=linux go build soma.go
+
+CMD ["./test"]
