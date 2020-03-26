@@ -6,4 +6,4 @@ COPY . .
 
 RUN GOOS=linux go build soma.go
 
-CMD ["./test"]
+CMD ["./soma"]
