@@ -7,4 +7,4 @@ COPY . .
 RUN go get -v ./...
 RUN go build
 
-CMD [ "./app" ]
+CMD [ "./app"]
