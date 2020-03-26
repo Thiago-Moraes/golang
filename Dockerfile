@@ -1,15 +1,9 @@
-# FROM golang:1.13-alpine
+FROM golang:1.13-alpine
 
-# WORKDIR /go/src
-
-# COPY . .
-
-# RUN GOOS=linux go build soma.go
-
-# CMD ["./soma"]
-
-FROM scratch
+WORKDIR ./src/soma
 
 COPY . .
 
-ENTRYPOINT ["./soma"]
+RUN GOOS=linux go build soma.go
+
+CMD ["./test"]
