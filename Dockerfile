@@ -1,9 +1,10 @@
 FROM golang:1.13-alpine
 
-WORKDIR ./src/soma
+WORKDIR /go/src/app
 
 COPY . .
 
-RUN GOOS=linux go build soma.go
+RUN go get -v ./...
+RUN go build
 
-CMD ["./test"]
+CMD [ "./app" ]

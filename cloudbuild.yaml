@@ -8,7 +8,8 @@ steps:
   name: mirror.gcr.io/library/golang
   args: ['go', 'test', '-v']
 
-- name: 'gcr.io/cloud-builders/docker'
+- id: "Build image"
+  name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/go_soma', '.']
 
 images: ['gcr.io/$PROJECT_ID/go_soma']
