@@ -3,7 +3,7 @@ steps:
     env: ['GO111MODULE=on']
     args: ['go', 'build', './...']
 
-#   - name: 'gcr.io/cloud-builders/docker'
-#     args: ['build', '--tag=gcr.io/$PROJECT_ID/go_soma', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '--tag=gcr.io/$PROJECT_ID/go_soma', '.']
 
-# images: ['gcr.io/$PROJECT_ID/go_soma']
+images: ['gcr.io/$PROJECT_ID/go_soma']
