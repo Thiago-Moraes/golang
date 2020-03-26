@@ -1,5 +1,5 @@
 steps:
-- name: mirror.gcr.io/library/go:alpine
+- name: mirror.gcr.io/library/go
   env: ['GO111MODULE=on']
   args: ['go', 'build', './...']
 
