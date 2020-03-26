@@ -1,13 +1,10 @@
-FROM golang:alpine AS builder
+FROM golang:1.13-alpine
 
-WORKDIR /go/src
+WORKDIR /go/src/app
 
-COPY  ./src/soma.go .
+COPY . .
 
-RUN go build .
+RUN go get -v ./...
+RUN go build
 
-FROM scratch
-
-COPY --from=builder /go/src/app/app /app
-
-CMD [ "/app" ]
+CMD [ "./app"]
